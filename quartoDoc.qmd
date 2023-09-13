@@ -1,3 +1,10 @@
+---
+title: "Introduction to R"
+author: "Shashwat Singh"
+format: html
+editor: visual
+---
+
 ## Checking R version
 
 ```{r}
@@ -10,8 +17,6 @@ R.version
 if(!require("DMwR2"))
 install.packages("DMwR2")
 ```
-
-
 
 -   Getting official documentation for any package
 
@@ -119,13 +124,14 @@ RSiteSearch('machine learning')
 #load("path_to_mysession.RData")
 ```
 
-
 ## Save all objects
+
 ```{r}
 save.image()
 ```
 
-- Run getwd() and setwd() in RStudio Console to show the current working directory and to set working directory respectively.
+-   Run getwd() and setwd() in RStudio Console to show the current working directory and to set working directory respectively.
+
 ```{r}
 getwd()
 
@@ -208,7 +214,7 @@ max(sample(1:100, 30))
 mean(sample(1:100, 30))
 ```
 
-- the seed determines the starting point used in generating a sequence of pseudo random numbers #set.seed() has global scope, meaning it affects all random number generators used/called in your program.
+-   the seed determines the starting point used in generating a sequence of pseudo random numbers #set.seed() has global scope, meaning it affects all random number generators used/called in your program.
 
 ```{r}
 set.seed(1)
@@ -279,7 +285,7 @@ convMeters(56.2, "yard")
 convMeters(to="yard", 56.2)
 ```
 
-##   FACTORS:
+## FACTORS:
 
 To create a factor, use factor(). Factors are represented internally as numeric vectors.
 
@@ -368,6 +374,7 @@ prop.table(t) * 100 #RESULTS IN PERCENTAGE
 ```
 
 ## R Data Structures
+
 -   VECTORS:
 
 Create a vector:
@@ -503,8 +510,7 @@ v1+v3#it makes v3 [1, 4, 1]
 2*v1
 ```
 
-- Vector Summary
-Use vector to illustrate "for" loop:
+-   Vector Summary Use vector to illustrate "for" loop:
 
 ```{r}
 mysum <- function (x){
