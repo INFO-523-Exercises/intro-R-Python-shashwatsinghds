@@ -59,6 +59,7 @@ Show packages loaded in the current session:
 ```
 
 ```{r}
+if(!require("dbplyr"))
 install.packages("dbplyr") 
 
 
@@ -74,7 +75,7 @@ library(dplyr)
 
 Another way to see what packages have been installed in your computer:
 
-```{r, eval=False}
+```{r}
 installed.packages() 
 
 ```
@@ -82,7 +83,7 @@ installed.packages()
 -   Find out if your installed packages have a newer version on CRAN:
 
 ```{r}
-old.packages()     
+#old.packages()     
 ```
 
 -   Update all your installed packages to the newest version:
@@ -1258,8 +1259,9 @@ my.dataframe
 Tibbles are similar to data frame, but they are more convenient than data frame.
 
 ```{r}
+if(!require("tibble"))
 install.packages("tibble")
-                                                                  library(tibble)
+                                                        library(tibble)
 ```
 
 CREATE A TIBBLE:
@@ -1274,6 +1276,7 @@ my.tibble
 Use the penguins data frame from the `palmerpenguins` package:
 
 ```{r}
+if(!require("palmerpenguins"))
 install.packages("palmerpenguins")
 library(palmerpenguins)
 data(penguins)
@@ -1391,6 +1394,7 @@ select() selects a subset of columns of the dataset.
 filter() select a subset of rows.
 
 ```{r}
+if(!require("dplyr"))
 install.packages("dplyr")
 library(dplyr)
 ```
